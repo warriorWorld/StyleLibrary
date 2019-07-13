@@ -3,6 +3,7 @@ package com.insightsurfface.stylelibrary.keyboard;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.insightsurfface.stylelibrary.R;
@@ -24,6 +25,6 @@ public class English9KeyboardView extends RelativeLayout {
     }
 
     private void init() {
-        LayoutInflater.from(mContext).inflate(R.layout.view_tag_with_line, this);
+        LayoutInflater.from(mContext).inflate(R.layout.keyboard_english9, this);
     }
 }

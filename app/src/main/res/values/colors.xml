@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="key_ok_color_pressed">#68072A</color>
     <color name="key_ok_color">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="divide">#e1e1e1</color>
 </resources>
