@@ -12,7 +12,7 @@
         android:textColor="@color/main_text_color"
         android:textColorHint="@color/main_text_color_gray"
         android:textSize="15sp"
-        android:background="@null"/>
+        android:background="@color/white"/>
 
     <com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView
         android:id="@+id/english_keyboard_view"
