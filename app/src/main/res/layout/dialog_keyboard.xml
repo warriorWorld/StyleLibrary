@@ -6,7 +6,7 @@
     <EditText
         android:id="@+id/dialog_et"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:hint="点按后滑动输入"
         android:gravity="center"
         android:textColor="@color/main_text_color"

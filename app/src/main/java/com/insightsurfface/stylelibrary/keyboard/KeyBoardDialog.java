@@ -81,6 +81,7 @@ public class KeyBoardDialog extends Dialog {
 
             @Override
             public void onFinish(String res) {
+                dialogEt.setText("");
                 if (null != mOnKeyboardChangeListener) {
                     mOnKeyboardChangeListener.onFinish(res);
                 }
