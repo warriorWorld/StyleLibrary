@@ -147,26 +147,21 @@ public class English9KeyBoardView extends RelativeLayout implements View.OnClick
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.delete_btn:
-                delete(false);
-                break;
-            case R.id.ok_btn:
-                onOkBtnClick();
-                break;
-            case R.id.space_btn:
-                handleInsert(" ");
-                break;
-            case R.id.help_btn:
-                if (null != mOnKeyboardListener) {
-                    mOnKeyboardListener.onQuestionClick();
-                }
-                break;
-            case R.id.options_iv:
-                if (null != mOnKeyboardListener) {
-                    mOnKeyboardListener.onOptionsClick();
-                }
-                break;
+        int i = view.getId();
+        if (i == R.id.delete_btn) {
+            delete(false);
+        } else if (i == R.id.ok_btn) {
+            onOkBtnClick();
+        } else if (i == R.id.space_btn) {
+            handleInsert(" ");
+        } else if (i == R.id.help_btn) {
+            if (null != mOnKeyboardListener) {
+                mOnKeyboardListener.onQuestionClick();
+            }
+        } else if (i == R.id.options_iv) {
+            if (null != mOnKeyboardListener) {
+                mOnKeyboardListener.onOptionsClick();
+            }
         }
     }
 
