@@ -107,7 +107,14 @@ public class English9KeyBoardView extends RelativeLayout implements View.OnClick
     public void attachTo(EditText editText) {
         this.mEditText = editText;
         hideSystemSofeKeyboard(context.getApplicationContext(), mEditText);
+    }
+
+    public void show() {
         this.setVisibility(VISIBLE);
+    }
+
+    public void hide() {
+        this.setVisibility(GONE);
     }
 
     private void setupKeys() {
@@ -136,7 +143,6 @@ public class English9KeyBoardView extends RelativeLayout implements View.OnClick
         if (null != mOnKeyboardChangeListener) {
             mOnKeyboardChangeListener.onFinish(mEditText.getText().toString());
         }
-        mEditText.setText("");
     }
 
     @Override
