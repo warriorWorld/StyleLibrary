@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparency">
+
+    <EditText
+        android:id="@+id/dialog_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="点按后滑动输入"
+        android:gravity="center"
+        android:textColor="@color/main_text_color"
+        android:textColorHint="@color/main_text_color_gray"
+        android:textSize="15sp"
+        android:background="@null"/>
+
+    <com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView
+        android:id="@+id/english_keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/dialog_et"></com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView>
+</RelativeLayout>
