@@ -13,6 +13,7 @@
         android:layout_height="50dp"/>
 
     <com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView
+        android:id="@+id/keyboard_v"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"></com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView>

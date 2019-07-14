@@ -3,23 +3,10 @@
                 android:layout_height="wrap_content"
                 android:background="@color/transparency">
 
-    <TextView
-        android:id="@+id/final_res_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:hint="点按然后滑动输入"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
-        android:textSize="22sp"/>
-
     <ImageView
         android:id="@+id/options_iv"
         android:layout_width="55dp"
         android:layout_height="78dp"
-        android:layout_below="@+id/final_res_tv"
-        android:layout_marginTop="25dp"
         android:background="@drawable/item_click"
         android:padding="14dp"
         android:scaleType="centerInside"
@@ -40,9 +27,7 @@
         android:id="@+id/delete_btn"
         android:layout_width="55dp"
         android:layout_height="78dp"
-        android:layout_below="@+id/final_res_tv"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="25dp"
         android:background="@drawable/item_click"
         android:padding="14dp"
         android:scaleType="centerInside"
@@ -64,8 +49,6 @@
         android:id="@+id/key_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/final_res_tv"
-        android:layout_marginTop="20dp"
         android:layout_toLeftOf="@id/delete_btn"
         android:layout_toRightOf="@+id/options_iv"
         android:orientation="vertical"
