@@ -38,8 +38,8 @@ public class KeyboardPopupWindow extends PopupWindow {
         downBtn = (Button) layout.findViewById(R.id.down_btn);
 
         setContentView(layout);
-        setWidth(DisplayUtil.dip2px(context, 86));
-        setHeight(DisplayUtil.dip2px(context, 86));
+        setWidth(DisplayUtil.dip2px(context, 140));
+        setHeight(DisplayUtil.dip2px(context, 140));
 
         // TODO: 2016/5/17 设置背景颜色
         setBackgroundDrawable(new ColorDrawable(context.getResources().getColor(R.color.transparency)));

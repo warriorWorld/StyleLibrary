@@ -67,7 +67,7 @@ public class GestureButton extends RelativeLayout {
                 vTracker.addMovement(e);
                 dx = (int) e.getX();
                 dy = (int) e.getY();
-                mKeyboardPopupWindow.showAsDropDown(this, DisplayUtil.dip2px(context, 0), DisplayUtil.dip2px(context, -68));
+                mKeyboardPopupWindow.showAsDropDown(this, DisplayUtil.dip2px(context, -25), DisplayUtil.dip2px(context, -100));
                 break;
             case MotionEvent.ACTION_MOVE:
                 int cx = (int) e.getX();
@@ -99,7 +99,7 @@ public class GestureButton extends RelativeLayout {
                     mOnResultListener.onChange(finalRes.toLowerCase());
                     if (!SharedPreferencesUtils.getBooleanSharedPreferencesData
                             (context, ShareKeys.CLOSE_SH_KEYBOARD_VIBRATION, false)) {
-                        VibratorUtil.Vibrate(context, 30);
+                        VibratorUtil.Vibrate(context, 25);
                     }
                 }
                 break;
