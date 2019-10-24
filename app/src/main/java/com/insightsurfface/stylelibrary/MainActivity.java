@@ -3,14 +3,17 @@ package com.insightsurfface.stylelibrary;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView;
+import com.insightsurfface.stylelibrary.keyboard.LandscapeKeyBoardDialog;
 import com.insightsurfface.stylelibrary.listener.OnKeyboardChangeListener;
 
 public class MainActivity extends AppCompatActivity {
     private EditText testEt;
+    private Button testBtn;
     private English9KeyBoardView keyboardV;
 
 
@@ -29,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
      */
     private void findViews() {
         testEt = (EditText) findViewById(R.id.test_et);
+        testBtn = findViewById(R.id.test_btn);
+        testBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLandscapeEditDialog();
+            }
+        });
         testEt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         keyboardV.show();
+    }
+
+    private void showLandscapeEditDialog() {
+        LandscapeKeyBoardDialog dialog = new LandscapeKeyBoardDialog(this);
+        dialog.show();
     }
 
     @Override
