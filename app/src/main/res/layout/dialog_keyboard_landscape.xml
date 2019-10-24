@@ -1,18 +1,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:rotation="90"
     android:background="@color/transparency">
 
     <EditText
         android:id="@+id/dialog_et"
-        android:layout_width="50dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:background="@color/white"
         android:gravity="center"
         android:hint="点按后滑动输入"
+        android:rotation="90"
         android:textColor="@color/main_text_color"
         android:textColorHint="@color/main_text_color_gray"
         android:textSize="15sp" />
 
+    <com.insightsurfface.stylelibrary.keyboard.English26KeyBoardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:rotation="90"></com.insightsurfface.stylelibrary.keyboard.English26KeyBoardView>
 </RelativeLayout>

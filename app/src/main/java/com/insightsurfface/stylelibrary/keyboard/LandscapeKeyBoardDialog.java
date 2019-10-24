@@ -46,9 +46,9 @@ public class LandscapeKeyBoardDialog extends Dialog {
         WindowManager wm = ((Activity) context).getWindowManager();
         Display d = wm.getDefaultDisplay(); // 闁兼儳鍢茶ぐ鍥╀沪韫囨挾顔庨悗鐟邦潟閿熸垝绶氶悵顕�鎮介敓锟�
         // lp.height = (int) (d.getHeight() * 0.4); // 濡ゅ倹锚鐎瑰磭鎷嬮崜褏鏋�
-//        lp.width = (int) (d.getWidth() * 1); // 閻庣妫勭�瑰磭鎷嬮崜褏鏋�
+        lp.height = (int) (d.getHeight() * 1); // 閻庣妫勭�瑰磭鎷嬮崜褏鏋�
         // window.setGravity(Gravity.LEFT | Gravity.TOP);
-//        window.setGravity(Gravity.BOTTOM);
+        window.setGravity(Gravity.BOTTOM);
         // dialog濮掓稒顭堥鑽や焊鏉堛劍绠抪adding 閻庝絻澹堥崵褎淇婇崒娑氫函濞戞挸绉风换鏍ㄧ▕閸綆鍟庣紓鍐惧枤濞堟垹鎷犻敓锟�
         // dialog婵ɑ鐡曠换娆愮▔瀹ュ牆鍘撮柛蹇嬪妼閻拷
         window.getDecorView().setPadding(0, 0, 0, 0);

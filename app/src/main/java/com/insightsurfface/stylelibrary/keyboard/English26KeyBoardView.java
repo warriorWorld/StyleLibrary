@@ -21,24 +21,14 @@ import com.insightsurfface.stylelibrary.utils.SharedPreferencesUtils;
 import java.lang.reflect.Method;
 
 
-public class English26KeyBoardView extends RelativeLayout implements View.OnClickListener, GestureButton.OnResultListener {
+public class English26KeyBoardView extends RelativeLayout implements View.OnClickListener {
     private Context context;
-    private GestureButton abcGb;
-    private GestureButton defGb;
-    private GestureButton ghiGb;
-    private GestureButton jklGb;
-    private GestureButton mnoGb;
-    private GestureButton pqrsGb;
-    private GestureButton tuvGb;
-    private GestureButton wxyzGb;
-    private View deleteBtn;
-    private View spaceBtn;
-    private View okBtn;
-    private View helpBtn;
-    private View optionsBtn;
-    protected OnKeyboardChangeListener mOnKeyboardChangeListener;
-    private OnKeyboardListener mOnKeyboardListener;
-    private EditText mEditText;
+//    private View deleteBtn;
+//    private View spaceBtn;
+//    private View okBtn;
+//    private View helpBtn;
+//    private View optionsBtn;
+//    private EditText mEditText;
 
     public English26KeyBoardView(Context context) {
         this(context, null);
@@ -55,46 +45,25 @@ public class English26KeyBoardView extends RelativeLayout implements View.OnClic
     }
 
     protected void init() {
-        LayoutInflater.from(context).inflate(R.layout.keyboard_english9, this);
-        abcGb = (GestureButton) findViewById(R.id.abc_gb);
-        defGb = (GestureButton) findViewById(R.id.def_gb);
-        ghiGb = (GestureButton) findViewById(R.id.ghi_gb);
-        jklGb = (GestureButton) findViewById(R.id.jkl_gb);
-        mnoGb = (GestureButton) findViewById(R.id.mno_gb);
-        pqrsGb = (GestureButton) findViewById(R.id.pqrs_gb);
-        tuvGb = (GestureButton) findViewById(R.id.tuv_gb);
-        wxyzGb = (GestureButton) findViewById(R.id.wxyz_gb);
-        if (SharedPreferencesUtils.getBooleanSharedPreferencesData(context, ShareKeys.IS_OTHER_LETTER_ORDER, false)) {
-            setupKeys();
-        } else {
-            setupKeys1();
-        }
-        deleteBtn = findViewById(R.id.delete_btn);
-        spaceBtn = findViewById(R.id.space_btn);
-        okBtn = findViewById(R.id.ok_btn);
-        helpBtn = findViewById(R.id.help_btn);
-        optionsBtn = findViewById(R.id.options_iv);
-
-        optionsBtn.setOnClickListener(this);
-        helpBtn.setOnClickListener(this);
-        abcGb.setOnResultListener(this);
-        defGb.setOnResultListener(this);
-        ghiGb.setOnResultListener(this);
-        jklGb.setOnResultListener(this);
-        mnoGb.setOnResultListener(this);
-        pqrsGb.setOnResultListener(this);
-        tuvGb.setOnResultListener(this);
-        wxyzGb.setOnResultListener(this);
-        deleteBtn.setOnClickListener(this);
-        spaceBtn.setOnClickListener(this);
-        okBtn.setOnClickListener(this);
-        deleteBtn.setOnLongClickListener(new OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                delete(true);
-                return true;
-            }
-        });
+        LayoutInflater.from(context).inflate(R.layout.keyboard_english26, this);
+//        deleteBtn = findViewById(R.id.delete_btn);
+//        spaceBtn = findViewById(R.id.space_btn);
+//        okBtn = findViewById(R.id.ok_btn);
+//        helpBtn = findViewById(R.id.help_btn);
+//        optionsBtn = findViewById(R.id.options_iv);
+//
+//        optionsBtn.setOnClickListener(this);
+//        helpBtn.setOnClickListener(this);
+//        deleteBtn.setOnClickListener(this);
+//        spaceBtn.setOnClickListener(this);
+//        okBtn.setOnClickListener(this);
+//        deleteBtn.setOnLongClickListener(new OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                delete(true);
+//                return true;
+//            }
+//        });
     }
 
     /**
@@ -102,11 +71,10 @@ public class English26KeyBoardView extends RelativeLayout implements View.OnClic
      *
      * @param editText 需要绑定自定义键盘的edittext
      */
-    public void attachTo(EditText editText) {
-        this.mEditText = editText;
-        hideSystemSofeKeyboard(context.getApplicationContext(), mEditText);
-    }
-
+//    public void attachTo(EditText editText) {
+//        this.mEditText = editText;
+//        hideSystemSofeKeyboard(context.getApplicationContext(), mEditText);
+//    }
     public void show() {
         this.setVisibility(VISIBLE);
     }
@@ -115,100 +83,58 @@ public class English26KeyBoardView extends RelativeLayout implements View.OnClic
         this.setVisibility(GONE);
     }
 
-    private void setupKeys() {
-        abcGb.setKeys("bac");
-        defGb.setKeys("edf");
-        ghiGb.setKeys("hgi");
-        jklGb.setKeys("kjl");
-        mnoGb.setKeys("nmo");
-        pqrsGb.setKeys("qprs");
-        tuvGb.setKeys("utv");
-        wxyzGb.setKeys("xwyz");
-    }
-
-    private void setupKeys1() {
-        abcGb.setKeys("abc");
-        defGb.setKeys("def");
-        ghiGb.setKeys("ghi");
-        jklGb.setKeys("jkl");
-        mnoGb.setKeys("mno");
-        pqrsGb.setKeys("pqrs");
-        tuvGb.setKeys("tuv");
-        wxyzGb.setKeys("wxyz");
-    }
-
     protected void onOkBtnClick() {
-        if (null != mOnKeyboardChangeListener) {
-            mOnKeyboardChangeListener.onFinish(mEditText.getText().toString());
-        }
+//        if (null != mOnKeyboardChangeListener) {
+//            mOnKeyboardChangeListener.onFinish(mEditText.getText().toString());
+//        }
     }
 
     @Override
     public void onClick(View view) {
-        int i = view.getId();
-        if (i == R.id.delete_btn) {
-            delete(false);
-        } else if (i == R.id.ok_btn) {
-            onOkBtnClick();
-        } else if (i == R.id.space_btn) {
-            handleInsert(" ");
-        } else if (i == R.id.help_btn) {
-            if (null != mOnKeyboardListener) {
-                mOnKeyboardListener.onQuestionClick();
-            }
-        } else if (i == R.id.options_iv) {
-            if (null != mOnKeyboardListener) {
-                mOnKeyboardListener.onOptionsClick();
-            }
-        }
+//        int i = view.getId();
+//        if (i == R.id.delete_btn) {
+//            delete(false);
+//        } else if (i == R.id.ok_btn) {
+//            onOkBtnClick();
+//        } else if (i == R.id.space_btn) {
+//            handleInsert(" ");
+//        } else if (i == R.id.help_btn) {
+//            if (null != mOnKeyboardListener) {
+//                mOnKeyboardListener.onQuestionClick();
+//            }
+//        } else if (i == R.id.options_iv) {
+//            if (null != mOnKeyboardListener) {
+//                mOnKeyboardListener.onOptionsClick();
+//            }
+//        }
     }
 
     private void delete(boolean delteAll) {
-        Editable editable = mEditText.getText();
-        int start = mEditText.getSelectionStart();
-        int end = mEditText.getSelectionEnd();
-        if (end > start) {
-            editable.delete(start, end);
-        }
-        if (!TextUtils.isEmpty(editable)) {
-            if (start > 0) {
-                if (delteAll) {
-                    editable.delete(0, start);
-                } else {
-                    editable.delete(start - 1, start);
-                }
-            }
-        }
+//        Editable editable = mEditText.getText();
+//        int start = mEditText.getSelectionStart();
+//        int end = mEditText.getSelectionEnd();
+//        if (end > start) {
+//            editable.delete(start, end);
+//        }
+//        if (!TextUtils.isEmpty(editable)) {
+//            if (start > 0) {
+//                if (delteAll) {
+//                    editable.delete(0, start);
+//                } else {
+//                    editable.delete(start - 1, start);
+//                }
+//            }
+//        }
     }
 
     private void handleInsert(String s) {
-        Editable editable = mEditText.getText();
-        int start = mEditText.getSelectionStart();
-        int end = mEditText.getSelectionEnd();
-        if (end > start) {
-            editable.delete(start, end);
-        }
-        editable.insert(start, s);
-    }
-
-    @Override
-    public void onResult(String result) {
-        handleInsert(result);
-    }
-
-    @Override
-    public void onChange(String result) {
-        if (null != mOnKeyboardChangeListener) {
-            mOnKeyboardChangeListener.onChange(result);
-        }
-    }
-
-    public void setOnKeyboardChangeListener(OnKeyboardChangeListener onKeyboardChangeListener) {
-        mOnKeyboardChangeListener = onKeyboardChangeListener;
-    }
-
-    public void setOnKeyboardListener(OnKeyboardListener onKeyboardListener) {
-        mOnKeyboardListener = onKeyboardListener;
+//        Editable editable = mEditText.getText();
+//        int start = mEditText.getSelectionStart();
+//        int end = mEditText.getSelectionEnd();
+//        if (end > start) {
+//            editable.delete(start, end);
+//        }
+//        editable.insert(start, s);
     }
 
     /**
