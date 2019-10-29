@@ -7,7 +7,6 @@
         android:id="@+id/dialog_et"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_above="@+id/keyboard_v"
         android:background="@color/white"
         android:gravity="center"
         android:hint="输入单词然后回车翻译"
@@ -17,7 +16,7 @@
 
     <com.insightsurfface.stylelibrary.keyboard.English26KeyBoardView
         android:id="@+id/keyboard_v"
+        android:layout_below="@+id/dialog_et"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"></com.insightsurfface.stylelibrary.keyboard.English26KeyBoardView>
+        android:layout_height="wrap_content"></com.insightsurfface.stylelibrary.keyboard.English26KeyBoardView>
 </RelativeLayout>
