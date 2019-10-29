@@ -69,6 +69,7 @@ public class LandscapeKeyBoardDialog extends Dialog {
         mEnglish26KeyBoardView.setKeyBorad26Listener(new English26KeyBoardView.KeyBorad26Listener() {
             @Override
             public void inputFinish(String s) {
+                dialogEt.setText("");
                 if (null != mKeyBorad26Listener) {
                     mKeyBorad26Listener.inputFinish(s);
                 }
@@ -82,6 +83,14 @@ public class LandscapeKeyBoardDialog extends Dialog {
                 }
             }
         });
+    }
+
+    public void setHint(String hint) {
+        dialogEt.setHint(hint);
+    }
+
+    public void setText(String text) {
+        dialogEt.setText(text);
     }
 
     public void setKeyBorad26Listener(English26KeyBoardView.KeyBorad26Listener keyBorad26Listener) {
