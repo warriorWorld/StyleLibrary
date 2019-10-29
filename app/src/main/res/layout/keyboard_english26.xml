@@ -283,7 +283,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1.5"
+            android:layout_weight="15"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:padding="5dp"
@@ -296,7 +296,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="Z"></Button>
@@ -308,7 +308,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="X"></Button>
@@ -320,7 +320,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="C"></Button>
@@ -332,7 +332,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="V"></Button>
@@ -344,7 +344,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="B"></Button>
@@ -356,7 +356,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="N"></Button>
@@ -368,7 +368,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1"
+            android:layout_weight="10"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:text="M"></Button>
@@ -379,7 +379,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="5dp"
-            android:layout_weight="1.5"
+            android:layout_weight="15"
             android:background="@drawable/item_click_c5"
             android:elevation="3dp"
             android:padding="5dp"
