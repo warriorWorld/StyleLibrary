@@ -1,5 +1,6 @@
 package com.insightsurfface.stylelibrary;
 
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showLandscapeEditDialog() {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         LandscapeKeyBoardDialog dialog = new LandscapeKeyBoardDialog(this);
         dialog.show();
     }
