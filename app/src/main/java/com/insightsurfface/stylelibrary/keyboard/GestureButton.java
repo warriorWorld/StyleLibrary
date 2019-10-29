@@ -99,7 +99,7 @@ public class GestureButton extends RelativeLayout {
                     mOnResultListener.onChange(finalRes.toLowerCase());
                     if (!SharedPreferencesUtils.getBooleanSharedPreferencesData
                             (context, ShareKeys.CLOSE_SH_KEYBOARD_VIBRATION, false)) {
-                        VibratorUtil.Vibrate(context, 25);
+                        VibratorUtil.Vibrate(context, 20);
                     }
                 }
                 break;

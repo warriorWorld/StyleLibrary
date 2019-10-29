@@ -10,7 +10,7 @@
         android:layout_above="@+id/keyboard_v"
         android:background="@color/white"
         android:gravity="center"
-        android:hint="点按后滑动输入"
+        android:hint="输入单词然后回车翻译"
         android:textColor="@color/main_text_color"
         android:textColorHint="@color/main_text_color_gray"
         android:textSize="15sp" />

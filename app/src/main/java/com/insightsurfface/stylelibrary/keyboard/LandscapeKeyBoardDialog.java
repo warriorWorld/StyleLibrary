@@ -16,7 +16,8 @@ import com.insightsurfface.stylelibrary.R;
 public class LandscapeKeyBoardDialog extends Dialog {
     protected Context context;
     private EditText dialogEt;
-
+    private English26KeyBoardView mEnglish26KeyBoardView;
+    private English26KeyBoardView.KeyBorad26Listener mKeyBorad26Listener;
 
     public LandscapeKeyBoardDialog(Context context) {
         super(context);
@@ -63,5 +64,27 @@ public class LandscapeKeyBoardDialog extends Dialog {
 
     protected void init() {
         dialogEt = (EditText) findViewById(R.id.dialog_et);
+        mEnglish26KeyBoardView = findViewById(R.id.keyboard_v);
+        mEnglish26KeyBoardView.attachTo(dialogEt);
+        mEnglish26KeyBoardView.setKeyBorad26Listener(new English26KeyBoardView.KeyBorad26Listener() {
+            @Override
+            public void inputFinish(String s) {
+                if (null != mKeyBorad26Listener) {
+                    mKeyBorad26Listener.inputFinish(s);
+                }
+            }
+
+            @Override
+            public void closeKeyboard() {
+                dismiss();
+                if (null != mKeyBorad26Listener) {
+                    mKeyBorad26Listener.closeKeyboard();
+                }
+            }
+        });
+    }
+
+    public void setKeyBorad26Listener(English26KeyBoardView.KeyBorad26Listener keyBorad26Listener) {
+        mKeyBorad26Listener = keyBorad26Listener;
     }
 }
