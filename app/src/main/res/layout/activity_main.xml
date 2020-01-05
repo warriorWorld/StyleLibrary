@@ -21,6 +21,16 @@
         android:text="测试"
         android:textColor="@color/white"></Button>
 
+    <Button
+        android:id="@+id/test_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/test_btn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_launcher_background"
+        android:text="测试"
+        android:textColor="@color/white"></Button>
+
     <com.insightsurfface.stylelibrary.keyboard.English9KeyBoardView
         android:id="@+id/keyboard_v"
         android:layout_width="match_parent"
