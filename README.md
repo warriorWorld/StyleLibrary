@@ -11,13 +11,13 @@ On this vertical version of this keyboard, you select the letter by sliding your
 ![github](https://github.com/warriorWorld/VideoCrawler/blob/master/app/screenshot/translate1.jpg) 
 
 ---
-Import the library:
+## Import the library:
 
 ```
     implementation 'com.github.warriorWorld:StyleLibrary:1.1.7'
 ```
 
-And call it like this:
+## And call it like this:
 
 ```java
   private void showKeyboardDialog() {
