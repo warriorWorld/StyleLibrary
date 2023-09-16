@@ -45,3 +45,24 @@ On this vertical version of this keyboard, you select the letter by sliding your
         dialog.show();
     }
 ```
+
+## If you want the horizontal version of this keyboard, then call it like this:
+
+```java
+ private void showLandsacpeKeyboardDialog() {
+        final LandscapeKeyBoardDialog dialog = new LandscapeKeyBoardDialog(this);
+        dialog.setKeyBorad26Listener(new English26KeyBoardView.KeyBorad26Listener() {
+            @Override
+            public void inputFinish(String s) {
+                translateWord(s);
+                copyToWordsFolder(s);
+            }
+
+            @Override
+            public void closeKeyboard() {
+
+            }
+        });
+        dialog.show();
+    }
+```
