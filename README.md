@@ -54,8 +54,7 @@ On this vertical version of this keyboard, you select the letter by sliding your
         dialog.setKeyBorad26Listener(new English26KeyBoardView.KeyBorad26Listener() {
             @Override
             public void inputFinish(String s) {
-                translateWord(s);
-                copyToWordsFolder(s);
+               //this will be called when users click Enter
             }
 
             @Override
